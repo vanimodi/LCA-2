@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section</title>
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="logo-header">
+      <a href="index.html">
+        <img src="asset/zara logo.jpg" alt="Logo" class="logo">
+        </a>
+    </header>
+
+    <header class="nav-header">
+        
+        <div class="header-icons-container">
+            <div class="header-icons">
+                <img src="asset/search.png" alt="Search" class="search-icon">
+                <img src="asset/person.png" alt="Profile" class="profile-icon">
+                <img src="asset/shopping bag.png" alt="Shopping Bag" class="shopping-bag">
+            </div>
+        </div>
+    </header>
+
+    <h1 style="text-align: center; color: white; font-size: 48px; font-weight: bold;"> SECTION </h1>
+
+    <main class="product-grid">
+        <div class="product-card">
+            <img src="asset/image 17.png" alt="HIGH-HEEL LEATHER COURT SHOES">
+            <h3>HIGH-HEEL LEATHER COURT SHOES</h3>
+            <p>₹ 6,990.00</p>
+        </div>
+        <div class="product-card">
+            <img src="asset/image 18.png" alt="LEATHER HIGH-HEEL COURT SHOES">
+            <h3>LEATHER HIGH-HEEL COURT SHOES</h3>
+            <p>₹ 8,990.00</p>
+        </div>
+        <div class="product-card">
+            <img src="asset/image 19.png" alt="HIGH-HEEL SLINGBACK SHOES">
+            <h3>HIGH-HEEL SLINGBACK SHOES</h3>
+            <p>₹ 5,990.00</p>
+        </div>
+        <div class="product-card">
+            <img src="asset/image 20.png" alt="WIDE HEELED SANDALS">
+            <h3>WIDE HEELED SANDALS</h3>
+            <p>₹ 4,990.00</p>
+        </div>
+        <div class="product-card">
+            <img src="asset/image 11.png" alt="HIGH-HEEL LEATHER COURT SHOES">
+            <h3>HIGH-HEEL LEATHER COURT SHOES</h3>
+            <p>₹ 6,990.00</p>
+        </div>
+        <div class="product-card">
+            <img src="asset/image 13.png" alt="LEATHER HIGH-HEEL COURT SHOES">
+            <h3>LEATHER HIGH-HEEL COURT SHOES</h3>
+            <p>₹ 8,990.00</p>
+        </div>
+        <div class="product-card">
+            <img src="asset/image 15.png" alt="HIGH-HEEL SLINGBACK SHOES">
+            <h3>HIGH-HEEL SLINGBACK SHOES</h3>
+            <p>₹ 5,990.00</p>
+        </div>
+        <div class="product-card">
+            <img src="asset/image 23.png" alt="WIDE HEELED SANDALS">
+            <h3>WIDE HEELED SANDALS</h3>
+            <p>₹ 4,990.00</p>
+        </div>
+    </main>
+
+    <div class="button-container">
+        <a href="categories.html">
+            <button class="shop-all-categories-button">SHOP ALL CATEGORIES</button>
+        </a>
+    </div>
+
+    <script>
+      
+      // Product card hover effect
+      const productCards = document.querySelectorAll('.product-card');  // Select all product cards
+      productCards.forEach(card => {
+          card.addEventListener('mouseenter', () => { // Add mouseenter event
+              card.style.transform = 'scale(1.05)';  // Enlarge the card
+              card.style.transition = 'transform 0.2s ease-in-out'; // Smooth transition
+          });
+          card.addEventListener('mouseleave', () => { // Add mouseleave event
+              card.style.transform = 'scale(1)';    // Restore original size
+              card.style.transition = 'transform 0.2s ease-in-out';
+          });
+      });
+  </script>
+</body>
+</html>

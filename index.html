@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .promo-banner {
+      background-color: #2f2f2f;
+      color: white;
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <header class="logo-header">
+    <img src="asset/zara logo.jpg" alt="Logo" class="logo" />
+  </header>
+
+  <div class="search-container">
+    <div class="search-bar">
+      <input type="text" placeholder="Search" />
+    </div>
+  </div>
+
+  <header class="nav-header">
+    <div class="header-icons-container">
+      <div class="header-icons">
+        <img src="asset/search.png" alt="Search" class="search-icon" />
+        <img src="asset/person.png" alt="Profile" class="profile-icon" />
+        <img src="asset/shopping bag.png" alt="Shopping Bag" class="shopping-bag" />
+      </div>
+    </div>
+  </header>
+
+  <main class="category-grid">
+    <div class="category">
+      <img src="asset/woman.png" alt="WOMAN" />
+      <p class="category-title">WOMAN</p>
+      <a href="section.html">SHOP NOW</a>
+    </div>
+    <div class="category">
+      <img src="asset/man.png" alt="MAN" />
+      <p class="category-title">MAN</p>
+      <a href="#">SHOP NOW</a>
+    </div>
+    <div class="category">
+      <img src="asset/child.png" alt="KIDS" />
+      <p class="category-title">KIDS</p>
+      <a href="#">SHOP NOW</a>
+    </div>
+    <div class="category">
+      <img src="asset/image 2.png" alt="HOME" />
+      <p class="category-title">BEAUTY</p>
+      <a href="#">SHOP NOW</a>
+    </div>
+  </main>
+
+  <script>
+    // Search bar interaction
+    const searchInput = document.querySelector('.search-bar input');
+    searchInput.addEventListener('focus', () => {
+      searchInput.style.opacity = 1;
+    });
+
+    searchInput.addEventListener('blur', () => {
+      if (!searchInput.value) {
+        searchInput.style.opacity = 0.2;
+      }
+    });
+
+    searchInput.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+        const searchTerm = searchInput.value;
+        alert(`Searching for: ${searchTerm}`);
+      }
+    });
+
+    // promotional banner using DOM
+    const banner = document.createElement('div');
+    banner.textContent = 'Free Shipping on Orders Over ₹1999!';
+    banner.classList.add('promo-banner');
+    document.body.insertBefore(banner, document.body.firstChild);
+
+    // getElementsByClassName to style category titles
+    const titles = document.getElementsByClassName('category-title');
+    for (let i = 0; i < titles.length; i++) {
+      titles[i].style.color = '#335040' ;
+      titles[i].style.fontWeight = 'bold';
+    }
+  </script>
+</body>
+</html>
